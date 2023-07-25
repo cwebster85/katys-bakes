@@ -1,0 +1,388 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+} 
+
+#container {
+    position: relative;
+    max-width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    min-width: 30vh;
+    min-height: 100vh;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+#container.modal-open {
+    background: lightgray 50%;
+  }
+  
+
+#banner {
+    display: flex;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 10%;
+    min-height: 27vh;
+    /* border: 1px solid red; */
+}
+
+.banner-text {
+    margin: 15px;
+    position: relative;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hollando Swash', sans-serif;
+    text-align: center;                                         
+}
+
+.slogan {
+    font-family: 'Hollando Swash', sans-serif;                                   
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    font-size: 15px;                            
+}
+
+.cakes {
+    width: 60px;
+    height: 70px;
+    border-radius: 5%;
+    margin: 10px 10px 0px 10px;
+    position: relative; 
+}
+
+.item-name {
+  font-family: 'Hollando Swash', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.item-info {
+  font-family: cursive;
+}
+
+.item-price {
+  font-family: cursive;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid gray; */
+}
+
+.border {
+    display: flex;
+    margin: 0px 10px 0px 10px;
+    justify-content: right;
+    align-items: right;
+    border-bottom: 1px solid gray;
+}
+
+.products-info {
+    display: inline-block;
+}
+
+.buy-btn {
+    margin: auto 10px 10px auto;
+    border: 1px solid #DEDEDE;
+    color: #3C3C3C;
+    background-color: white;
+    border-radius: 50%;
+    font-family: Inter;
+    font-size: 14px;
+    text-align: center; /* Added text-align property */
+    display: flex; /* Added display property */
+    justify-content: center; /* Added justify-content property */
+    align-items: center; /* Added align-items property */
+    width: 24px; /* Adjust the width as needed */
+    height: 24px; 
+}
+
+.buy-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(21, 156, 228, 0.4);
+    transform: scale(1.08);
+}
+
+/* NEED TO GET BORDERS ON EACH ITEM IN BASKET! */
+
+#basket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10px 10px 25px;
+    font-family: cursive;
+    
+}
+
+#basket, p {
+    font-size: 12px;
+}
+
+.basket-inner {
+  width: 95%;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+}
+
+.subtotal {
+  border-bottom: 1px solid gray;
+  padding: 6px;
+  margin-bottom: 15px;
+}
+
+.remove-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* margin: auto 10px 10px auto; */
+  border: 1px solid #DEDEDE;
+  color: #3C3C3C;
+  background-color: white;
+  border-radius: 50%;
+  font-family: Inter;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+}
+
+.remove-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(21, 156, 228, 0.4);
+  transform: scale(1.08);
+}
+
+
+.basket-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Hollando Swash', sans-serif;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    margin: 0 10px 0 0px;
+}
+
+.total-title {
+  font-family: 'Hollando Swash', sans-serif;
+  font-size: 20px;
+}
+
+#checkout {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-family: Verdana;
+  font-size: 12px;
+  font-style: normal;
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+#checkout:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(1, 132, 255, 0.4);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+  max-height: 90%;
+  z-index: 2;
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px;
+  overflow: auto; /* Enable scrolling within the modal */
+  border-radius: 3px;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    width: 90%;
+    max-width: calc(100% - 240px); /* Adjust the margin as per your needs */
+    max-height: calc(100% - 20px); /* Adjust the margin as per your needs */
+  }
+}
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    padding: 8px;
+    max-height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: auto;
+  }
+
+  .modal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 20px; */
+  }
+
+  .modal-content form {
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .modal-content input, .pay {
+    display: block;
+    color: #757575;
+    font-family: Verdana;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.119px; 
+    width: 100%;
+    height: 40.924px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .modal-content input, .pay {
+      max-width: calc(100% - 100px); /* Adjust the margin as per your needs */
+      max-height: calc(100% - 20px); /* Adjust the margin as per your needs */
+      margin-left: 50px;
+    }
+  }
+
+  .pay {
+    display: block;
+    color: white;
+    font-family: Verdana;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 3.89px;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    line-height: 10px; 
+    width: 100%;
+    border: none;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .speech-bubble {
+    position: relative;
+    max-width: 30em;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1.125em 1.5em;
+    font-size: 9px;
+    border-radius: 1rem;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    color: white;
+  }
+  
+  /* Adjust the position of the speech bubble based on the image dimensions */
+  .speech-bubble:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 1.5em;
+    border: .75rem solid transparent;
+    border-top: none;
+    /* border-bottom-color: #12c2e9; */
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+  }
+
+
+  .success-message {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:lighter;
+    font-size: 15px;
+    font-family: 'Hollando Swash', sans-serif;
+    border: 1px solid black;
+    background: #007991;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+  }
+
